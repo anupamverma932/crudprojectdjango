@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Records</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h2>Add Patients</h2>
+        </div>
+        <form id="patient-form">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-3 text-lef">
+                    <label class="form-label" for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-3 text-lef">
+                    <label class="form-label" for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last name">
+                </div>
+                <div class="col-2 text-lef">
+                    <label class="form-label" for="gender" id="gender">Gender</label>
+                    <select class="form-select" id="inputGroupSelect03" name="gender"
+                        aria-label="Example select with button addon">
+                        <option value="">Select..</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Trans</option>
+                    </select>
+                </div>
+                <div class="col-2 text-lef">
+                    <label class="form-label" for="date_of_birth" id="date_of_birth">Date of birth</label>
+                    <input type="date" name="date_of_birth" class="form-control" placeholder="mm/dd/yyyy">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-secondary" id="cancel">Cancel</button>
+                    <button name="submit" class="btn btn-primary" type="submit" id="add-btn">Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+{% load static %}
+<script>
+    var addPatientURL = "{% url 'crudoperation.save' %}"
+    var homeUrl = "{% url 'index' %}"
+    backbutton(homeUrl)
+    $('#cancel').click(function () {
+        home(homeUrl)
+    });
+</script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+</html>
