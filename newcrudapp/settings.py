@@ -26,7 +26,7 @@ SECRET_KEY = '@(eq6+gt*$4j67hz$3ul_4jjvj+zf3y!%=l&3!7bp#3(&5a*mw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['crudprojectdjango-app-git-anupamverma932-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com','crud-projectdjango-git-anupamverma932-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com']
+ALLOWED_HOSTS = ['crudproject-django-git-anupamverma932-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com','crud-projectdjango-git-anupamverma932-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com']
 
 
 # Application definition
