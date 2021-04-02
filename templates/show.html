@@ -33,7 +33,7 @@
                     <tr>
                         <td colspan="4" align="left">Date Of Birth</td>
                         <td colspan="2" align="left"><span class="text-value">{{ patient.date_of_birth }}</span>
-                            <input type="date" class="form-control" value="{{ patient.date_of_birth }}"
+                            <input type="date" class="form-control" value="{{ patient.date_of_birth|date:'Y-m-d' }}"
                                 name="date_of_birth" hidden>
                         </td>
                     </tr>
