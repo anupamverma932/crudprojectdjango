@@ -64,7 +64,7 @@ function Element(url, method) {
                     window.history.pushState("", "Patients records", url);
                     $('body').html(res)
                 },
-                error: function () {
+                error: function (error) {
                     console.log(error)
                 }
 
@@ -82,7 +82,7 @@ function Element(url, method) {
                 window.history.pushState("", "Patients records", url);
                 $('body').html(res)
             },
-            error: function () {
+            error: function (error) {
                 console.log(error)
             }
 
